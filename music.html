@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{width:100%; height: auto; background-image: url(bkrnd.jpg); padding: 0px; margin: auto; 
+      background-repeat: no-repeat; background-size: cover;}
+    .b{width:1500px; height: 70px;}
+    .music{width:400px; height: 60px; float:left; color: aquamarine; margin-top: 10px;
+    margin-left: 10px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+    .music h1{color: rgb(100, 12, 12);}
+    .a{width:300px; height: 60px; float:right;}
+    .container-lg{width:700px; height:80px; background-color: rgb(118, 211, 180); margin-left: 50px;}
+    .c{width: 510px; height: 60px; float: left; margin-left: 110px;}
+    .d{width: 600px; height: 60px; float:right;margin-right: 250px;}
+    .right-col{margin-left:500px;color: antiquewhite; margin-top: 2px;}
+    .right-col p{margin-left:70px; color: black;}
+    .right-col img{margin-left:88px;}
+    .page{margin-left:480px;}
+    .page img{border-radius: 2px; border: 2px solid black;}
+    </style>
+    
+</head>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<body>
+  <script src="js/bootstrap.min.js"></script>
+ <div class="container-lg  border border-3 border-dark rounded-pill">
+  <div class="music">
+ <H1> MUSIC ZONE</H1>
+ </div>
+ <div class="a">
+  <nav class="navbar  mt-2 me-2 rounded">
+    <div class="container-fluid">
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+ </div>
+ </div>
+<div class="b">
+  <div class="c">
+   <nav class="navbar navbar-expand-lg bg-dark text-white ms-2 mt-2 rounded-3">
+     <div class="container-fluid >
+    <a class="navbar-brand" href="#"><i class="bi bi-house"></i>HOME</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+         <div class="navbar-nav ">
+           <a class="nav-link active text-white" aria-current="page" href="#">ABOUT</a>
+           <a class="nav-link active text-white" href="#"><i class="bi bi-person-lines-fill"></i>CONTACT</a>
+           <a class="nav-link active text-white" href="#">LOGIN</a>
+           <a class="nav-link undisabled active text-white" aria-disabled="true">Create an account</a>
+          </div>
+      </div>
+      </div>
+    </nav>
+  </div>
+  <div class="d">
+    <nav class="navbar navbar-expand-lg bg-dark me-3 mt-2 rounded-3">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#">ALBUMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-white" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"><i class="bi bi-chat-heart"></i>Favorates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Languages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"><i class="bi bi-file-arrow-down"></i>Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"><i class=""></i>Trending</a>
+            </li>
+            
+            <li class="nav-item dropdown text-white">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Playlist
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">MELODY</a></li>
+                <li><a class="dropdown-item" href="#">FASTBOOSTED</a></li>
+                <li><a class="dropdown-item" href="#">NOSTALGIC</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="content">
+  <div class="left-col">
+      <h1></h1>
+  </div>
+<div class="page">
+  <img src="download (3).jpg" width="300px" height="280px">
+  </div>
+  <div class="right-col">
+  <p><b>Click here to play</b></p>
+ <img src="download.play.png" id="icon"  width="80px" height="40px">
+</div>
+
+<audio id="mysound">
+  <source src="Udhayame Nee Ariyumo_128-(DJMaza).mp3" type="audio/mp3">
+</audio>
+<script>
+ let mysound=document.getElementById("mysound");
+  let icon=document.getElementById("icon");
+
+  icon.onclick=function(){
+    if(mysound.paused){
+      mysound.play();
+      icon.src="download.pause.png";
+    } else{
+      mysound.pause();
+      icon.src="download.play.png";
+    }
+  }
+</script>
+</body>
+</html>
